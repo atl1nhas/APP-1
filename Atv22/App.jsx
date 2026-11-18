@@ -66,36 +66,79 @@ import './App.css'
 
 // --------------------------------------------------------------------------------
 
-function ListaTarefas() {
-  const [tarefas, setTarefas] = useState([]);
-  const [input, setInput] = useState("");
+// function ListaTarefas() {
+//   const [tarefas, setTarefas] = useState([]);
 
-  function adicionarTarefa() {
-    const novaTarefa = {
-      id: Date.now(),
-      texto: input
-    };
+//   function adicionarTarefa() {
+//     const novaTarefa = {
+//       id: Date.now(),
+//       texto: "Estudar React"
+//     };
 
-    setTarefas([...tarefas, novaTarefa]);
-    setInput("");
-  }
+//     setTarefas([...tarefas, novaTarefa]);
+//   }
 
-  return (
-    <div>
-      <input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
+//   return (
+//     <div>
+//       <h2>Lista de Tarefas</h2>
 
-      <button onClick={adicionarTarefa}>Adicionar</button>
+//       <button onClick={adicionarTarefa}>
+//         Adicionar tarefa
+//       </button>
 
-      <ul>
-        {tarefas.map((tarefa) => (
-          <li key={tarefa.id}>{tarefa.texto}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+//       {tarefas.map((tarefa) => (
+//         <p key={tarefa.id}>
+//           {tarefa.texto} - ID: {tarefa.id}
+//         </p>
+//       ))}
+//     </div>
+//   );
+// }
 
-export default ListaTarefas;
+// export default ListaTarefas;
+
+// --------------------------------------------------------------------------------
+
+// function ListaTarefas() {
+//   const [tarefas, setTarefas] = useState([]);
+//   const [input, setInput] = useState("");
+
+//   function adicionarTarefa() {
+//     if (!input.trim()) return;
+
+//     const novaTarefa = {
+//       id: Date.now(),
+//       texto: input
+//     };
+
+//     setTarefas([...tarefas, novaTarefa]);
+//     setInput("");
+//   }
+
+//   return (
+//     <div>
+//       <h2>Lista de Tarefas</h2>
+
+//       <input
+//         type="text"
+//         value={input}
+//         onChange={(e) => setInput(e.target.value)}
+//         placeholder="Digite uma tarefa"
+//       />
+
+//       <button onClick={adicionarTarefa}>
+//         Adicionar
+//       </button>
+
+//       <ul>
+//         {tarefas.map((tarefa) => (
+//           <li key={tarefa.id}>
+//             {tarefa.texto}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default ListaTarefas;
